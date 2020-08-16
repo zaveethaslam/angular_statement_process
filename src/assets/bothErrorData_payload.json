@@ -1,0 +1,26 @@
+[
+    {
+      "reference": 194261,
+      "accountNumber": "NL91RABO0315273637",
+      "description": "Clothes from Jan Bakker",
+      "startBalance": 21.6,
+      "mutation": -41.83,
+      "endBalance": -5.23
+    },
+    {
+      "reference": 112807,
+      "accountNumber": "NL27SNSB0917829871",
+      "description": "Clothes for Willem Dekker",
+      "startBalance": 91.23,
+      "mutation": "+15.57",
+      "endBalance": 106.8
+    },
+    {
+      "reference": 112807,
+      "accountNumber": "NL69ABNA0433647324",
+      "description": "Clothes for Jan King",
+      "startBalance": 86.66,
+      "mutation": "+44.5",
+      "endBalance": 131.16
+    }
+  ]

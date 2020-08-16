@@ -1,0 +1,34 @@
+
+
+<style>
+@import url('https://bootstrapstudio.io/demo/embed/bootstrap/4/default/bootstrap.min.css');
+</style>
+
+
+<div class="contact-clean">
+    <form [formGroup]="myForm" >
+          <div class="form-group json-textarea-container">
+            <div class="form-group text-center">
+              <button class="btn btn-primary center-block btn-sm" (click)="generateData('success')">Generate Data for Successful</button>
+              <button class="btn btn-info center-block btn-sm" (click)="generateData('duplicate')">Generate Data for Duplicate Records</button>
+              <button class="btn btn-success center-block btn-sm" (click)="generateData('unbalanced')">Generate Data for UnBalanced Records</button>
+              <button class="btn btn-warning center-block btn-sm" (click)="generateData('both')">Generate Data for Duplicated and UnBalanced Records</button>
+              <button class="btn btn-secondary center-block btn-sm" (click)="generateData('badrequest')">Generate Data for Bad Request</button>
+              <button class="btn btn-danger center-block btn-sm" (click)="generateData('error')">Generate Data for Internal Server Error</button>
+            </div>
+          <textarea type="text" class="json-textarea-container" style="height: 450px" formControlName="jsonContainer" name="jsonTextArea" [(ngModel)]="jsonText" class="form-control"></textarea>
+          </div>
+        <div class="form-group text-center"><button class="btn btn-primary center-block"(click)="onSubmit()">Process Entries</button></div>
+    </form>
+
+    <div class="contact-clean">
+      <form>
+     <div style="align:center;width:400px;">
+            <div *ngIf="responseRecords">
+              {{ responseRecords | json }}
+            </div>
+    </div>
+
+    </form>
+    </div>
+</div>

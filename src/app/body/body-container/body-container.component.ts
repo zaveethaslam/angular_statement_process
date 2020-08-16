@@ -32,7 +32,7 @@ export class BodyContainerComponent implements OnInit {
 
     onSubmit(): void{
     const jsonValue = this.myForm.value.jsonContainer;
-    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin':'*' });
     let options = new RequestOptions({ headers: headers });
     console.log(jsonValue);
     this.http.post(environment.basepath, jsonValue, options).subscribe((res)=>{

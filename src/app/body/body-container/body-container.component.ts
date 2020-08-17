@@ -32,17 +32,13 @@ export class BodyContainerComponent implements OnInit {
 
     onSubmit(): void{
     const jsonValue = this.myForm.value.jsonContainer;
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin':'*' });
+    let headers = new Headers({ 'Content-Type': 'application/json'});
     let options = new RequestOptions({ headers: headers });
     console.log(jsonValue);
     this.http.post(environment.basepath, jsonValue, options).subscribe((res)=>{
-      console.log(res);
       this.responseRecords = JSON.parse(res["_body"]);
-      console.log(this.responseRecords);
     }, (err) => {
-      console.log(err);
       this.responseRecords = JSON.parse(err["_body"]);
-      console.log(this.responseRecords);
     });
    }
 
@@ -59,8 +55,6 @@ export class BodyContainerComponent implements OnInit {
         this.jsonText = JSON.stringify(badRequestData);
       else if(data == "error")
         this.jsonText = JSON.stringify(invalidData);
-        
-
    }
 
 
